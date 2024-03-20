@@ -5,9 +5,11 @@ function App() {
   return (
     <div className="min-h-screen flex dark:bg-gray-900">
       <Sidebar />
-      <Outlet />
+      <div className="p-10 flex-grow">
+        <Outlet />
+      </div>
     </div>
   )
 }
 
-export default App
+export default App;
