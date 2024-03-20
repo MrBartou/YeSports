@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import TeamInfo from './pages/TeamInfo.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import NotFound from './pages/errors/NotFound.jsx'
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '/teams/:teamSlug',
+    element: <TeamInfo />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
