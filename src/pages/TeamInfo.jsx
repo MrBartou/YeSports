@@ -48,7 +48,6 @@ function TeamInfo() {
   if (isLoading) {
     return (
       <div className="min-h-screen dark:bg-gray-900">
-        <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white py-5">Chargement...</h1>
         <div className="flex">
           <div className="w-1/5">
             <Sidebar />
@@ -67,12 +66,12 @@ function TeamInfo() {
 
   return (
     <div className="min-h-screen dark:bg-gray-900">
-      <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white py-5">Liste des joueurs de {teamData.name}</h1>
       <div className="flex">
         <div className="w-1/5">
           <Sidebar />
         </div>
         <div className="flex-1 overflow-auto p-4">
+        <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white py-5">Liste des joueurs de {teamData.name}</h1>
           <div className="grid grid-cols-3 gap-4">
             {teamData.players.map((player) => {
               const playerStats = matchStats.find(stat => stat.id === player.id) || {};
