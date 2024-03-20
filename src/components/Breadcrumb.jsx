@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Breadcrumb({ items }) {
     return (
@@ -12,9 +13,9 @@ function Breadcrumb({ items }) {
                     </svg>
                     )}
                     {index < items.length - 1 ? (
-                    <a href={item.href} className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                    <Link to={item.href} className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                         {item.label}
-                    </a>
+                    </Link>
                     ) : (
                     <span className="text-sm font-medium text-gray-500 dark:text-gray-400">{item.label}</span>
                     )}
