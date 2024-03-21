@@ -2,7 +2,7 @@ import { useState } from 'react';
 import 'flowbite';
 import PropTypes from 'prop-types';
 
-function TeamPlayer({age, firstName, lastName, pseudo, image, nationality, role, birth, equipe, matchesPlayed, matchesWon, matchesLost}) {
+function PlayerCard({age, firstName, lastName, pseudo, image, nationality, role, birth, equipe, matchesPlayed, matchesWon, matchesLost}) {
   const [activeTab, setActiveTab] = useState('about');
 
   const handleTabChange = (newTab) => {
@@ -34,7 +34,9 @@ function TeamPlayer({age, firstName, lastName, pseudo, image, nationality, role,
                     <img src={image} alt="Player Image" className="w-24 md:w-32 h-24 md:h-32 mx-auto rounded-full object-cover" />
                     <h2 className="mt-3 text-center text-xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white truncate">{pseudo}</h2>
                     <p className="mt-2 text-center text-xs md:text-sm text-gray-500 dark:text-gray-400 truncate">{firstName} {lastName}</p>
-                    <p className="mt-2 text-center text-xs md:text-sm text-gray-400 dark:text-gray-300">{role}</p>
+                    {role && (
+                        <p className="mt-2 text-center text-xs md:text-sm text-gray-400 dark:text-gray-300">{role}</p>
+                    )}
                 </div>
               )}
               {activeTab === 'autres' && (
@@ -62,7 +64,7 @@ function TeamPlayer({age, firstName, lastName, pseudo, image, nationality, role,
   );
 }
 
-TeamPlayer.propTypes = {
+PlayerCard.propTypes = {
   id: PropTypes.string.isRequired,
   age: PropTypes.number,
   firstName: PropTypes.string.isRequired,
@@ -78,4 +80,4 @@ TeamPlayer.propTypes = {
   matchesLost: PropTypes.number,
 };
 
-export default TeamPlayer;
+export default PlayerCard;

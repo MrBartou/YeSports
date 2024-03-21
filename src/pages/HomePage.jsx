@@ -8,10 +8,7 @@ import lolImage from '../assets/games/lol.jpg';
 function HomePage() {
     const title = 'Accueil';
     const breadcrumbItems = [
-        {
-            label: 'Accueil',
-            href: '/',
-        },
+        { label: 'Accueil', href: '/' },
     ];
 
     const games = [
