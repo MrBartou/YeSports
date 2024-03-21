@@ -6,6 +6,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import NotFound from './pages/errors/NotFound.jsx'
 import HomePage from './pages/HomePage.jsx'
+import PlayerPage from './pages/PlayerPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/teams/:teamSlug',
         element: <TeamPage />
+      },
+      {
+        path: '/players',
+        element: <PlayerPage />
       }
     ]
   },
