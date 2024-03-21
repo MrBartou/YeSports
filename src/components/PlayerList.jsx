@@ -34,7 +34,7 @@ function PlayerList({ teamData, matchStats }) {
 
 PlayerList.propTypes = {
     teamData: PropTypes.object.isRequired,
-    matchStats: PropTypes.array.isRequired
+    matchStats: PropTypes.array
 };
 
 export default PlayerList;
