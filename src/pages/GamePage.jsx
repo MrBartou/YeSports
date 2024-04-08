@@ -53,7 +53,7 @@ function GamePage() {
     <>
       {isLoading ? (
         <>
-          <Header title={`Liste de toutes les équipes de ${getGameFullName(gameName)}`} breadcrumbItems={[{ label: 'Accueil', href: '/' }, { label: 'Équipes' }, { label: getGameFullName(gameName)}]} />
+          <Header title={`Liste de toutes les équipes de ${getGameFullName(gameName)}`} breadcrumbItems={[{ label: 'Accueil', href: '/' }, { label: getGameFullName(gameName) }]} />
           <div className='flex-1 overflow-auto p-4'>
             <div className='grid grid-cols-3 gap-4'>
               <SkeletonPlayer />
@@ -64,7 +64,7 @@ function GamePage() {
         </>
       ) : (
         <>
-          <Header title={`Liste de toutes les équipes de ${getGameFullName(gameName)}`} breadcrumbItems={[{ label: 'Accueil', href: '/' }, { label: 'Équipes' }, { label: getGameFullName(gameName)}]} />
+          <Header title={`Liste de toutes les équipes de ${getGameFullName(gameName)}`} breadcrumbItems={[{ label: 'Accueil', href: '/' }, { label: getGameFullName(gameName) }]} />
           <TeamList teamData={teamData} />
           <Pagination
             currentPage={currentPage}
