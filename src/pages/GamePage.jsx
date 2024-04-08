@@ -15,6 +15,15 @@ function GamePage() {
   const [totalItems, setTotalItems] = useState(0);
   const [perPage, setPerPage] = useState(30);
 
+  const getGameFullName = (name) => {
+    const gameNames = {
+      rl: 'Rocket League',
+      csgo: 'Counter Strike',
+      lol: 'League of Legends',
+    };
+    return gameNames[name] || name;
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       try {

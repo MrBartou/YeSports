@@ -34,11 +34,11 @@ function PlayerCard({id, age, firstName, lastName, pseudo, image, nationality, r
               Autres
             </button>
           </li>
-          <li className="mr-2">
+          { matchesPlayed && <li className="mr-2">
             <button onClick={() => handleTabChange('stats')} type="button" className={`inline-block p-2 md:p-4 rounded-lg ${activeTab === 'stats' ? 'text-emerald-600 dark:text-emerald-500' : 'hover:text-gray-600 dark:hover:text-gray-300'} `} role="tab">
               Stats
             </button>
-          </li>
+          </li> }
         </ul>
           <div className="p-2 md:p-4">
               {activeTab === 'about' && (
@@ -58,15 +58,15 @@ function PlayerCard({id, age, firstName, lastName, pseudo, image, nationality, r
               {activeTab === 'autres' && (
                 <div className="bg-white rounded-lg md:p-8 dark:bg-gray-800">
                     <ul className="space-y-2 md:space-y-4 text-gray-500 dark:text-gray-400">
-                        <li>Age : {age}</li>
-                        <li>Nationalité : {nationality}</li>
-                        <li>Date de naissance : {birth}</li>
-                        <li>Pseudo : {pseudo}</li>
-                        <li>Équipe : {equipe}</li>
+                        { age ? <li><span className="font-bold">Age</span> : {age}</li> : null }
+                        { nationality ? <li><span className="font-bold">Nationalité</span> : {nationality}</li> : null }
+                        { birth ? <li><span className="font-bold">Date de naissance</span> : {birth}</li> : null }
+                        <li><span className="font-bold">Pseudo</span> : {pseudo}</li>
+                        { equipe ? <li><span className="font-bold">Équipe</span> : {equipe}</li> : null }
                     </ul>
                 </div>
               )}
-              {activeTab === 'stats' && (
+              {activeTab === 'stats' && matchesPlayed && (
                 <div className="bg-white rounded-lg md:p-8 dark:bg-gray-800">
                   <ul className="space-y-2 md:space-y-4 text-gray-500 dark:text-gray-400">
                     <li>Matches joués : {matchesPlayed}</li>
@@ -96,11 +96,11 @@ function PlayerCard({id, age, firstName, lastName, pseudo, image, nationality, r
 PlayerCard.propTypes = {
   id: PropTypes.string.isRequired,
   age: PropTypes.number,
-  firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired,
+  firstName: PropTypes.string,
+  lastName: PropTypes.string,
   pseudo: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  nationality: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  nationality: PropTypes.string,
   role: PropTypes.string,
   birth: PropTypes.string,
   equipe: PropTypes.string,
