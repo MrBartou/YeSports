@@ -1,4 +1,5 @@
 import "flowbite";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
     return (
@@ -34,13 +35,13 @@ function Sidebar() {
                             </button>
                             <ul id="dropdown-pages" className="hidden py-2 space-y-2">
                                 <li>
-                                    <a href="#" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Rocket League</a>
+                                    <Link to="/games/rl" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Rocket League</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Counter-Strike</a>
+                                    <Link to="/games/csgo" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Counter-Strike</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">League of Legends</a>
+                                    <Link to="/games/lol" className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">League of Legends</Link>
                                 </li>
                             </ul>
                         </li>

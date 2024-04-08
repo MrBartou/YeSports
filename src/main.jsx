@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import NotFound from './pages/errors/NotFound.jsx'
 import HomePage from './pages/HomePage.jsx'
 import PlayerPage from './pages/PlayerPage.jsx'
+import GamePage from './pages/GamePage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/players',
         element: <PlayerPage />
+      },
+      {
+        path: '/games/:gameName',
+        element: <GamePage />
       }
     ]
   },
