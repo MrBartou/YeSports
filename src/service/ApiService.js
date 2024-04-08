@@ -1,7 +1,7 @@
 const BASE_URL = "https://api.pandascore.co";
 const AUTH_HEADER = {
     accept: 'application/json',
-    authorization: `Bearer AoQmVNGTseJUalgPE4kipVvn_5yPUJ7eZxdrI9K5K3jee2cZ3Bg`
+    authorization: `Bearer UPvzAF-JHJCJj4ME_DMf7gW2fJ5CEuEa2hKE-LS5dn-kNbTTepU`
 };
 
 async function fetchFromApi(endpoint, queryParams = {}) {
@@ -30,3 +30,4 @@ export const fetchAllPlayers = async (filters = {}) => {
 
 export const fetchTeamData = teamSlug => fetchFromApi(`teams/${teamSlug}`);
 export const fetchPlayerMatches = playerId => fetchFromApi(`players/${playerId}/matches`);
+export const fetchGameTeams = gameName => fetchFromApi(`${gameName}/teams`);

@@ -12,9 +12,9 @@ function HomePage() {
     ];
 
     const games = [
-        { name: 'Rocket League', description: "C'est comme du foot, mais avec des voitures et du boost. Et c'est encore plus fun.", image: rocketLeagueImage, href: '/' },
-        { name: 'Counter-Strike', description: "C'est comme la guerre, mais avec des pistolets à clous et des bombes à C4.", image: csImage, href: '/' },
-        { name: 'League of Legends', description: "Quand tu perds un match de League of Legends, c'est toujours la faute de ton jungler.", image: lolImage, href: '/' },
+        { name: 'Rocket League', description: "C'est comme du foot, mais avec des voitures et du boost. Et c'est encore plus fun.", image: rocketLeagueImage, href: '/games/rl' },
+        { name: 'Counter-Strike', description: "C'est comme la guerre, mais avec des pistolets à clous et des bombes à C4.", image: csImage, href: '/games/csgo' },
+        { name: 'League of Legends', description: "Quand tu perds un match de League of Legends, c'est toujours la faute de ton jungler.", image: lolImage, href: '/games/lol' },
     ]
 
     return (
