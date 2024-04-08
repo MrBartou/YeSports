@@ -37,13 +37,16 @@ function TeamPage() {
   return (
     <>
       {isLoading ? (
-        <div className='flex-1 overflow-auto p-4'>
-            <div className='grid grid-cols-3 gap-4'>
-                <SkeletonPlayer />
-                <SkeletonPlayer />
-                <SkeletonPlayer />
+        <>
+            <Header title={`Liste de tous les joueurs`} breadcrumbItems={[{ label: 'Accueil', href: '/' }, { label: 'Joueurs' }]} />
+            <div className='flex-1 overflow-auto p-4'>
+                <div className='grid grid-cols-3 gap-4'>
+                    <SkeletonPlayer />
+                    <SkeletonPlayer />
+                    <SkeletonPlayer />
+                </div>
             </div>
-        </div>
+        </>
       ) : (
         <>
           <Header title={`Liste de tous les joueurs`} breadcrumbItems={[{ label: 'Accueil', href: '/' }, { label: 'Joueurs' }]} />
