@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const nationalities = ['FR', 'US', 'JP', 'KR', 'CN', 'RU', 'BR', 'TR', 'VN', 'TW', 'TH', 'ID', 'PH', 'IN', 'DE', 'ES', 'IT', 'UK', 'CA', 'AU', 'NL', 'BE', 'SE', 'NO', 'DK', 'FI', 'PL', 'CZ', 'SK', 'HU', 'RO', 'GR', 'TR', 'RU', 'UA', 'KZ', 'UZ', 'TM', 'KG', 'TJ', 'AZ', 'AM', 'GE', 'BY', 'MD', 'LV', 'LT', 'EE', 'HR', 'SI', 'BA', 'RS', 'MK', 'BG', 'AL', 'XK', 'ME'];
 const videogames = [
   { id: 1, name: 'League of Legends' },
-  { id: 2, name: 'Dota 2' },
+  { id: 22, name: 'Rocket League' },
   { id: 3, name: 'CS:GO' },
 ];
 
