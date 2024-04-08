@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Sidebar from "./components/Sidebar"
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Sidebar />
       <div className="py-4 px-5 sm:p-10 flex-grow">
         <Outlet />
+        <Footer />
       </div>
     </div>
   )
