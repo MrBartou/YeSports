@@ -4,6 +4,7 @@ import SkeletonPlayer from '../components/SkeletonPlayer';
 import { fetchTeamData, fetchPlayerMatches } from '../service/ApiService'
 import Header from '../components/Header';
 import PlayerList from '../components/PlayerList';
+import { useTranslation } from 'react-i18next';
 
 function TeamPage() {
   const { teamSlug } = useParams();
@@ -13,6 +14,8 @@ function TeamPage() {
   const [title, setTitle] = useState("");
   const [breadcrumbItems, setBreadcrumbItems] = useState([]);
 
+  const { t } = useTranslation();
+
   useEffect(() => {
       const fetchData = async () => {
           try {
@@ -21,9 +24,9 @@ function TeamPage() {
               if (!team?.players) return;
 
               setTeamData(team);
-              setTitle(`Equipe ${team.current_videogame.name} de ${team.name}`);
+              setTitle(t("teamPage__title", { videogame: team.current_videogame.name, team: team.name }));
               setBreadcrumbItems([
-                { label: 'Accueil', href: '/' },
+                { label: t("home"), href: '/' },
                 { label: team.current_videogame.name, href: '/' },
                 { label: team.name }
               ]);
@@ -44,7 +47,7 @@ function TeamPage() {
       }
 
       fetchData();
-  }, [teamSlug]);
+  }, [t, teamSlug]);
 
   return isLoading ? (
         <>

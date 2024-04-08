@@ -2,8 +2,10 @@ import 'flowbite';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import teamIcon from '../assets/team.png';
+import { useTranslation } from 'react-i18next';
 
 function TeamCard({ name, image_url, acronym, location, current_videogame, slug }) {
+  const { t } = useTranslation();
 
   return (
     <div className="p-2">
@@ -17,9 +19,9 @@ function TeamCard({ name, image_url, acronym, location, current_videogame, slug 
           <div className="p-4 flex-grow">
             <h3 className="font-bold text-xl mb-2 tracking-tight text-gray-900 dark:text-white">{name}</h3>
             <p className="text-gray-700 dark:text-gray-400 text-base">
-              Acronym: {acronym}<br />
-              Location: {location}<br />
-              Game: {current_videogame.name}
+              <span className="font-bold">{t("teamCard__acro")}</span>: {acronym}<br />
+              <span className="font-bold">{t("teamCard__location")}</span>: {location}<br />
+              <span className="font-bold">{t("teamCard__game")}</span>: {current_videogame.name}
             </p>
           </div>
         </div>

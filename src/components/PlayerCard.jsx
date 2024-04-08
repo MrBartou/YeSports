@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import 'flowbite';
 import PropTypes from 'prop-types';
 import avatarIcon from '../assets/avatar.png';
+import { useTranslation } from 'react-i18next';
 
 function PlayerCard({id, age, firstName, lastName, pseudo, image, nationality, role, birth, equipe, matchesPlayed, matchesWon, matchesLost}) {
   const [activeTab, setActiveTab] = useState('about');
   const [hasLiked, setHasLiked] = useState(false);
+
+  const { t } = useTranslation();
 
   const handleTabChange = (newTab) => {
     setActiveTab(newTab);
@@ -26,17 +29,17 @@ function PlayerCard({id, age, firstName, lastName, pseudo, image, nationality, r
         <ul className="flex flex-wrap text-xs md:text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800" role="tablist">
           <li className="mr-2">
             <button onClick={() => handleTabChange('about')} type="button" className={`inline-block p-2 md:p-4 rounded-lg ${activeTab === 'about' ? 'text-emerald-600 dark:text-emerald-500' : 'hover:text-gray-600 dark:hover:text-gray-300'} `} role="tab">
-              À propos
+              {t("playerCard__about")}
             </button>
           </li>
           <li className="mr-2">
             <button onClick={() => handleTabChange('autres')} type="button" className={`inline-block p-2 md:p-4 rounded-lg ${activeTab === 'autres' ? 'text-emerald-600 dark:text-emerald-500' : 'hover:text-gray-600 dark:hover:text-gray-300'} `} role="tab">
-              Autres
+              {t("playerCard__other")}
             </button>
           </li>
           { matchesPlayed && <li className="mr-2">
             <button onClick={() => handleTabChange('stats')} type="button" className={`inline-block p-2 md:p-4 rounded-lg ${activeTab === 'stats' ? 'text-emerald-600 dark:text-emerald-500' : 'hover:text-gray-600 dark:hover:text-gray-300'} `} role="tab">
-              Stats
+              {t("playerCard__stats")}
             </button>
           </li> }
         </ul>
@@ -58,20 +61,20 @@ function PlayerCard({id, age, firstName, lastName, pseudo, image, nationality, r
               {activeTab === 'autres' && (
                 <div className="bg-white rounded-lg md:p-8 dark:bg-gray-800">
                     <ul className="space-y-2 md:space-y-4 text-gray-500 dark:text-gray-400">
-                        { age ? <li><span className="font-bold">Age</span> : {age}</li> : null }
-                        { nationality ? <li><span className="font-bold">Nationalité</span> : {nationality}</li> : null }
-                        { birth ? <li><span className="font-bold">Date de naissance</span> : {birth}</li> : null }
+                        { age ? <li><span className="font-bold">{t("playerCard__age")}</span> : {age}</li> : null }
+                        { nationality ? <li><span className="font-bold">{t("nationality")}</span> : {nationality}</li> : null }
+                        { birth ? <li><span className="font-bold">{t("playerCard__birthDate")}</span> : {birth}</li> : null }
                         <li><span className="font-bold">Pseudo</span> : {pseudo}</li>
-                        { equipe ? <li><span className="font-bold">Équipe</span> : {equipe}</li> : null }
+                        { equipe ? <li><span className="font-bold">{t("playerCard__team")}</span> : {equipe}</li> : null }
                     </ul>
                 </div>
               )}
               {activeTab === 'stats' && matchesPlayed && (
                 <div className="bg-white rounded-lg md:p-8 dark:bg-gray-800">
                   <ul className="space-y-2 md:space-y-4 text-gray-500 dark:text-gray-400">
-                    <li>Matches joués : {matchesPlayed}</li>
-                    <li>Matches gagnés : {matchesWon}</li>
-                    <li>Matches perdus : {matchesLost}</li>
+                    <li><span className="font-bold">{t("playerCard__matchesPlayed")}</span> : {matchesPlayed}</li>
+                    <li><span className="font-bold">{t("playerCard__matchesWon")}</span> : {matchesWon}</li>
+                    <li><span className="font-bold">{t("playerCard__matchesLost")}</span> : {matchesLost}</li>
                   </ul>
                 </div>
               )}

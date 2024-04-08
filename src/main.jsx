@@ -10,6 +10,8 @@ import PlayerPage from './pages/PlayerPage.jsx'
 import GamePage from './pages/GamePage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 
+import "./utils/i18n.js";
+
 const router = createBrowserRouter([
   {
     path: '/',

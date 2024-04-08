@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import { useParams } from 'react-router-dom';
 import TeamList from '../components/TeamList';
 import Pagination from '../components/Pagination';
+import { useTranslation } from 'react-i18next';
 
 function GamePage() {
   const { gameName } = useParams();
@@ -14,6 +15,8 @@ function GamePage() {
   const [totalPages, setTotalPages] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
   const [perPage, setPerPage] = useState(30);
+
+  const { t } = useTranslation();
 
   const getGameFullName = (name) => {
     const gameNames = {
@@ -53,7 +56,7 @@ function GamePage() {
     <>
       {isLoading ? (
         <>
-          <Header title={`Liste de toutes les équipes de ${getGameFullName(gameName)}`} breadcrumbItems={[{ label: 'Accueil', href: '/' }, { label: getGameFullName(gameName) }]} />
+          <Header title={t("gamePage__title", { game: getGameFullName(gameName)})} breadcrumbItems={[{ label: t("home"), href: '/' }, { label: getGameFullName(gameName) }]} />
           <div className='flex-1 overflow-auto p-4'>
             <div className='grid grid-cols-3 gap-4'>
               <SkeletonPlayer />
@@ -64,7 +67,7 @@ function GamePage() {
         </>
       ) : (
         <>
-          <Header title={`Liste de toutes les équipes de ${getGameFullName(gameName)}`} breadcrumbItems={[{ label: 'Accueil', href: '/' }, { label: getGameFullName(gameName) }]} />
+          <Header title={t("gamePage__title", { game: getGameFullName(gameName)})} breadcrumbItems={[{ label: t("home"), href: '/' }, { label: getGameFullName(gameName) }]} />
           <TeamList teamData={teamData} />
           <Pagination
             currentPage={currentPage}

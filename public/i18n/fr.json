@@ -1,0 +1,72 @@
+{
+    "home": "Accueil",
+    "games": "Jeux",
+    "players": "Joueurs",
+    "nationality": "Nationalité",
+    "contact": "Contact",
+    "teams": "Équipes",
+
+    "prev": "Précédent",
+    "next": "Suivant",
+    "to": "à",
+    "on": "sur",
+
+    "sidebar__open": "Ouvrir la navigation",
+
+    "filters__search": "Recherche par nom",
+    "filters__searchPlaceholder": "Entrer le nom du joueur",
+    "filters__selectNationality": "Sélectionner la nationalité",
+    "filters__videogame": "Jeu vidéo",
+    "filters__selectVideogame": "Sélectionner un jeu",
+    "filter__resultsPerPage": "Résultats par page",
+    "filters__hideFilters": "Cacher les filtres",
+    "filters__showFilters": "Afficher les filtres",
+    "filters__applyFilters": "Appliquer les filtres",
+
+    "footer__rights": "Tous droits réservés",
+
+    "gameCard__showTeams": "Voir les équipes",
+    
+    "gameList__gamesList": "Liste des jeux",
+
+    "playerCard__about": "À propos",
+    "playerCard__other": "Autre",
+    "playerCard__stats": "Stats",
+    "playerCard__age": "Âge",
+    "playerCard__birthDate": "Date de naissance",
+    "playerCard__team": "Équipe",
+    "playerCard__matchesPlayed": "Matches joués",
+    "playerCard__matchesWon": "Matches gagnés",
+    "playerCard__matchesLost": "Matches perdus",
+
+    "playerList__playersList": "Liste des joueurs",
+
+    "teamCard__acro": "Acronyme",
+    "teamCard__location": "Localisation",
+    "teamCard__game": "Jeu",
+
+    "teamList__teamsList": "Liste des équipes",
+    "teamList__noTeams": "Aucune équipe trouvée",
+
+
+
+
+    "contact__title": "Contactez-nous",
+    "contact__subtitle": "Vous avez un problème technique ? Vous souhaitez envoyer des commentaires sur une fonctionnalité bêta ? Faites le nous savoir.",
+    "contact__email": "Votre adresse e-mail",
+    "contact__subject": "Sujet",
+    "contact__subjectPlaceholder": "Dites-nous comment nous pouvons vous aider",
+    "contact__message": "Votre message",
+    "contact__messagePlaceholder": "Laisser un commentaire...",
+    "contact__send": "Envoyer le message",
+
+    "gamePage__title": "Liste de toutes les équipes {{ game }}",
+
+    "homePage__rlDescription": "C'est comme du foot, mais avec des voitures et du boost. Et c'est encore plus fun.",
+    "homePage__csDescription": "C'est comme la guerre, mais avec des pistolets à clous et des bombes à C4.",
+    "homePage__lolDescription": "Quand tu perds un match de League of Legends, c'est toujours la faute de ton jungler.",
+
+    "playerPage__title": "Liste de tous les joueurs",
+
+    "teamPage__title": "Équipe {{ videogame }} de {{ team }}"
+}

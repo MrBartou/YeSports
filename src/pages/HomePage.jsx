@@ -4,17 +4,20 @@ import Header from '../components/Header';
 import rocketLeagueImage from '../assets/games/rocket-league.jpg';
 import csImage from '../assets/games/cs.jpg';
 import lolImage from '../assets/games/lol.jpg';
+import { useTranslation } from 'react-i18next';
 
 function HomePage() {
-    const title = 'Accueil';
+    const { t } = useTranslation();
+
+    const title = t("home");
     const breadcrumbItems = [
-        { label: 'Accueil', href: '/' },
+        { label: t("home"), href: '/' },
     ];
 
     const games = [
-        { name: 'Rocket League', description: "C'est comme du foot, mais avec des voitures et du boost. Et c'est encore plus fun.", image: rocketLeagueImage, href: '/games/rl' },
-        { name: 'Counter-Strike', description: "C'est comme la guerre, mais avec des pistolets à clous et des bombes à C4.", image: csImage, href: '/games/csgo' },
-        { name: 'League of Legends', description: "Quand tu perds un match de League of Legends, c'est toujours la faute de ton jungler.", image: lolImage, href: '/games/lol' },
+        { name: 'Rocket League', description: t("homePage__rlDescription"), image: rocketLeagueImage, href: '/games/rl' },
+        { name: 'Counter-Strike', description: t("homePage__csDescription"), image: csImage, href: '/games/csgo' },
+        { name: 'League of Legends', description: t("homePage__lolDescription"), image: lolImage, href: '/games/lol' },
     ]
 
     return (
