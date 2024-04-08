@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <footer className="bg-white rounded-lg shadow dark:bg-gray-900 mt-4">
+        <footer className="bg-white rounded-lg dark:bg-gray-900 mt-4">
             <div className="w-full max-w-screen-xl mx-auto pt-4">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
