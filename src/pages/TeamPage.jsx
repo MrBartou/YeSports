@@ -47,13 +47,16 @@ function TeamPage() {
   }, [teamSlug]);
 
   return isLoading ? (
-      <div className='flex-1 overflow-auto p-4'>
-          <div className='grid grid-cols-3 gap-4'>
-              <SkeletonPlayer />
-              <SkeletonPlayer />
-              <SkeletonPlayer />
-          </div>
-      </div>
+        <>
+            <Header title={title} breadcrumbItems={breadcrumbItems} />
+            <div className='flex-1 overflow-auto p-4'>
+                <div className='grid grid-cols-3 gap-4'>
+                    <SkeletonPlayer />
+                    <SkeletonPlayer />
+                    <SkeletonPlayer />
+                </div>
+            </div>
+        </>
   ) : (
       <>
           <Header title={title} breadcrumbItems={breadcrumbItems} />
