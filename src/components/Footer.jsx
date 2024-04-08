@@ -14,7 +14,7 @@ function Footer() {
                             <Link to={"/"} className="hover:underline me-4 md:me-6">Accueil</Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">Contact</a>
+                            <Link to={"/contact"} className="hover:underline">Contact</Link>
                         </li>
                     </ul>
                 </div>
