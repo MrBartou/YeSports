@@ -3,6 +3,7 @@ import CustomCalendar from '../components/CustomCalendar';
 import MatchComponent from '../components/MatchComponent';
 import { fetchGameMatchesByMonth } from '../service/ApiService';
 import { format, addMonths, subMonths } from 'date-fns';
+import { fr } from 'date-fns/locale';
 
 function CalendarPage() {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -53,7 +54,7 @@ function CalendarPage() {
         <div className="container mx-auto p-4">
             <div className="flex items-center justify-between py-4">
                 <button onClick={handlePrevMonth} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Prev</button>
-                <h2 className="text-xl text-gray-900 dark:text-white">{format(currentDate, 'MMMM yyyy')}</h2>
+                <h2 className="text-xl text-gray-900 dark:text-white">{format(currentDate, 'MMMM yyyy', { locale: fr })}</h2>
                 <button onClick={handleNextMonth} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next</button>
             </div>
             <CustomCalendar currentDate={currentDate} onSelectDay={handleDayClick} matches={matches} />
