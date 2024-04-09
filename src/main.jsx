@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage.jsx'
 import PlayerPage from './pages/PlayerPage.jsx'
 import GamePage from './pages/GamePage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
+import CalendarPage from './pages/CalendarPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,8 +34,12 @@ const router = createBrowserRouter([
         element: <GamePage />
       },
       {
-        path: '/contact', 
+        path: '/contact',
         element: <ContactPage />
+      },
+      {
+        path: '/calendar',
+        element: <CalendarPage />
       }
     ]
   },
