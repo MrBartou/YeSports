@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/*",
+      "source": "/:path*",
       "destination": "https://api.pandascore.co/:path*"
     }
   ],
