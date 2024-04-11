@@ -1,25 +1,19 @@
-const BASE_URL = "https://api.pandascore.co";
-const AUTH_HEADER = {
-    accept: 'application/json',
-    authorization: `Bearer UPvzAF-JHJCJj4ME_DMf7gW2fJ5CEuEa2hKE-LS5dn-kNbTTepU`
-};
-
 async function fetchFromApi(endpoint, queryParams = {}) {
-    const url = new URL(`${BASE_URL}/${endpoint}`);
+    const url = new URL(`/api/pandascore-proxy?endpoint=${endpoint}`, window.location.origin);
     Object.entries(queryParams).forEach(([key, value]) => {
         if (value) url.searchParams.append(key, value);
     });
 
-    const response = await fetch(url, { headers: AUTH_HEADER });
+    const response = await fetch(url.toString());
     if (!response.ok) throw new Error(`Failed to fetch data from ${endpoint}: ${response.statusText}`);
     return response.json();
 }
 
 async function fetchFromApiWithPagination(endpoint, queryParams = {}) {
-    const url = new URL(`${BASE_URL}/${endpoint}`);
+    const url = new URL(`/api/pandascore-proxy?endpoint=${endpoint}`, window.location.origin);
     Object.entries(queryParams).forEach(([key, value]) => url.searchParams.append(key, value));
 
-    const response = await fetch(url, { headers: AUTH_HEADER });
+    const response = await fetch(url.toString());
     if (!response.ok) throw new Error(`Failed to fetch data from ${endpoint}: ${response.statusText}`);
 
     const data = await response.json();
@@ -55,4 +49,3 @@ export const fetchGameTeams = async (gameName, pageNumber = 1, pageSize = 30) =>
 
     return fetchFromApiWithPagination(`${gameName}/teams`, queryParams);
 };
-
