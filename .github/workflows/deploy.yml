@@ -19,6 +19,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Test
+        run: npm test
+
       - name: Vercel Deployment
         uses: amondnet/vercel-action@v20
         with:
