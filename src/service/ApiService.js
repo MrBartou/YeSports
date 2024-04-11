@@ -49,3 +49,11 @@ export const fetchGameTeams = async (gameName, pageNumber = 1, pageSize = 30) =>
 
     return fetchFromApiWithPagination(`${gameName}/teams`, queryParams);
 };
+
+export const fetchGameMatchesByMonth = async (gameId, year, month) => {
+    const startDate = new Date(Date.UTC(year, month - 1, 1)).toISOString();
+    const endDate = new Date(Date.UTC(year, month, 0, 23, 59, 59)).toISOString();
+
+    const endpoint = `matches?filter[videogame]=${gameId}&range[begin_at]=${startDate},${endDate}`;
+    return fetchFromApi(endpoint);
+};

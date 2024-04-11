@@ -6,14 +6,14 @@
     "nationality": "国籍",
     "contact": "連絡先",
     "teams": "チーム",
-    
+
     "prev": "前",
     "next": "次",
     "to": "に",
     "on": "で",
-    
+
     "sidebar__open": "ナビゲーションを開く",
-    
+
     "filters__search": "名前で検索",
     "filters__searchPlaceholder": "プレイヤーの名前を入力",
     "filters__selectNationality": "国籍を選択",
@@ -23,13 +23,13 @@
     "filters__hideFilters": "フィルターを隠す",
     "filters__showFilters": "フィルターを表示",
     "filters__applyFilters": "フィルターを適用",
-    
+
     "footer__rights": "全著作権所有",
-    
+
     "gameCard__showTeams": "チームを見る",
-    
+
     "gameList__gamesList": "ゲームリスト",
-    
+
     "playerCard__about": "約",
     "playerCard__other": "その他",
     "playerCard__stats": "統計",
@@ -39,16 +39,16 @@
     "playerCard__matchesPlayed": "プレイした試合数",
     "playerCard__matchesWon": "勝利した試合数",
     "playerCard__matchesLost": "負けた試合数",
-    
+
     "playerList__playersList": "プレイヤーリスト",
-    
+
     "teamCard__acro": "略語",
     "teamCard__location": "ロケーション",
     "teamCard__game": "ゲーム",
-    
+
     "teamList__teamsList": "チームリスト",
     "teamList__noTeams": "チームが見つかりません",
-    
+
     "contact__title": "お問い合わせ",
     "contact__subtitle": "技術的な問題がありますか？ベータ機能に関するフィードバックを送りたいですか？お知らせください。",
     "contact__email": "メールアドレス",
@@ -57,15 +57,18 @@
     "contact__message": "メッセージ",
     "contact__messagePlaceholder": "コメントを残す...",
     "contact__send": "メッセージを送る",
-    
+
     "gamePage__title": "全{{ game }}チームリスト",
-    
+
     "homePage__rlDescription": "それはサッカーのようですが、車とブーストでプレイされ、もっと楽しいです。",
     "homePage__csDescription": "それは戦争のようですが、釘銃とC4爆弾で行われます。",
     "homePage__lolDescription": "League of Legendsの試合に負けた場合、いつもジャングラーのせいです。",
-    
+
     "playerPage__title": "全プレイヤーリスト",
-    
-    "teamPage__title": "{{ team }}の{{ videogame }}チーム"
+
+    "teamPage__title": "{{ team }}の{{ videogame }}チーム",
+
+    "status": "ステータス",
+    "number_of_match": "試合数",
+    "winner": "勝者"
 }
-    
