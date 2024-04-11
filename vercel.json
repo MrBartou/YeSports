@@ -7,7 +7,7 @@
   ],
   "headers": [
     {
-      "source": "/api/:path*",
+      "source": "/:path*",
       "headers": [
         { "key": "Accept", "value": "application/json" },
         { "key": "Authorization", "value": "Bearer UPvzAF-JHJCJj4ME_DMf7gW2fJ5CEuEa2hKE-LS5dn-kNbTTepU" }
