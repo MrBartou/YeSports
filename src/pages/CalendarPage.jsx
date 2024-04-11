@@ -53,9 +53,9 @@ function CalendarPage() {
     return (
         <div className="container mx-auto p-4">
             <div className="flex items-center justify-between py-4">
-                <button onClick={handlePrevMonth} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Prev</button>
+                <button onClick={handlePrevMonth} className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Précédent</button>
                 <h2 className="text-xl text-gray-900 dark:text-white">{format(currentDate, 'MMMM yyyy', { locale: fr })}</h2>
-                <button onClick={handleNextMonth} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next</button>
+                <button onClick={handleNextMonth} className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Suivant</button>
             </div>
             <CustomCalendar currentDate={currentDate} onSelectDay={handleDayClick} matches={matches} />
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
