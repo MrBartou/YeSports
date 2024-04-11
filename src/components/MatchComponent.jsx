@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 function MatchComponent({ match }) {
+  const { t } = useTranslation();
   return (
     <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200 ease-in-out">
       {match.league.image_url && (
@@ -11,9 +13,9 @@ function MatchComponent({ match }) {
           {match.videogame.name} - {match.name}
         </h5>
         <div className="text-gray-700 dark:text-gray-400 text-sm mt-2">
-          <p>Status: {match.status}</p>
-          <p>Nombre de match: {match.number_of_games}</p>
-          <p>Winner: {match.winner ? match.winner.name : 'N/A'}</p>
+          <p>{t("status")}: - {match.status}</p>
+          <p>{t("number_of_match")}: {match.number_of_games}</p>
+          <p>{t("winner")}: {match.winner ? match.winner.name : 'N/A'}</p>
         </div>
         <div className="flex items-center mt-4">
           {match.streams_list.map((stream, index) => (

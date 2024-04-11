@@ -65,5 +65,9 @@
 
     "playerPage__title": "Liste aller Spieler",
 
-    "teamPage__title": "{{ videogame }}-Team von {{ team }}"
+    "teamPage__title": "{{ videogame }}-Team von {{ team }}",
+
+    "status": "Status",
+    "number_of_match": "Anzahl der Spiele",
+    "winner": "Gewinner"
 }

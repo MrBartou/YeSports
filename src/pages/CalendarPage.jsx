@@ -4,8 +4,10 @@ import MatchComponent from '../components/MatchComponent';
 import { fetchGameMatchesByMonth } from '../service/ApiService';
 import { format, addMonths, subMonths } from 'date-fns';
 import { fr } from 'date-fns/locale';
+import { useTranslation } from 'react-i18next';
 
 function CalendarPage() {
+    const { t } = useTranslation();
     const [currentDate, setCurrentDate] = useState(new Date());
     const [matches, setMatches] = useState({});
     const [selectedDay, setSelectedDay] = useState(null);
@@ -53,9 +55,9 @@ function CalendarPage() {
     return (
         <div className="container mx-auto p-4">
             <div className="flex items-center justify-between py-4">
-                <button onClick={handlePrevMonth} className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Précédent</button>
+                <button onClick={handlePrevMonth} className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">{t("prev")}</button>
                 <h2 className="text-xl text-gray-900 dark:text-white">{format(currentDate, 'MMMM yyyy', { locale: fr })}</h2>
-                <button onClick={handleNextMonth} className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Suivant</button>
+                <button onClick={handleNextMonth} className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">{t("next")}</button>
             </div>
             <CustomCalendar currentDate={currentDate} onSelectDay={handleDayClick} matches={matches} />
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
