@@ -2,6 +2,9 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import i18nBackend from 'i18next-http-backend';
 
+const APP_URL = import.meta.env.VITE_APP_URL;
+console.log(APP_URL);
+
 i18n
     .use(i18nBackend)
     .use(initReactI18next)
@@ -12,7 +15,7 @@ i18n
             escapeValue: false
         },
         backend: {
-            loadPath: "http://localhost:5173/i18n/{{lng}}.json",
+            loadPath: `${APP_URL}/i18n/{{lng}}.json`,
         },
     });
 
