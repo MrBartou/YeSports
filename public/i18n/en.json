@@ -1,0 +1,72 @@
+{
+    "home": "Home",
+    "games": "Games",
+    "players": "Players",
+    "nationality": "Nationality",
+    "contact": "Contact",
+    "teams": "Teams",
+
+    "prev": "Previous",
+    "next": "Next",
+    "to": "to",
+    "on": "on",
+
+    "sidebar__open": "Open navigation",
+
+    "filters__search": "Search by name",
+    "filters__searchPlaceholder": "Enter player name",
+    "filters__selectNationality": "Select nationality",
+    "filters__videogame": "Video game",
+    "filters__selectVideogame": "Select a game",
+    "filter__resultsPerPage": "Results per page",
+    "filters__hideFilters": "Hide filters",
+    "filters__showFilters": "Show filters",
+    "filters__applyFilters": "Apply filters",
+
+    "footer__rights": "All rights reserved",
+
+    "gameCard__showTeams": "Show teams",
+
+    "gameList__gamesList": "Games list",
+
+    "playerCard__about": "About",
+    "playerCard__other": "Other",
+    "playerCard__stats": "Stats",
+    "playerCard__age": "Age",
+    "playerCard__birthDate": "Date of birth",
+    "playerCard__team": "Team",
+    "playerCard__matchesPlayed": "Matches played",
+    "playerCard__matchesWon": "Matches won",
+    "playerCard__matchesLost": "Matches lost",
+
+    "playerList__playersList": "Players list",
+
+    "teamCard__acro": "Acronym",
+    "teamCard__location": "Location",
+    "teamCard__game": "Game",
+
+    "teamList__teamsList": "Teams list",
+    "teamList__noTeams": "No teams found",
+
+
+
+
+    "contact__title": "Contact us",
+    "contact__subtitle": "Do you have a technical problem? Want to provide feedback on a beta feature? Let us know.",
+    "contact__email": "Your email address",
+    "contact__subject": "Subject",
+    "contact__subjectPlaceholder": "Tell us how we can help you",
+    "contact__message": "Your message",
+    "contact__messagePlaceholder": "Leave a comment...",
+    "contact__send": "Send message",
+
+    "gamePage__title": "List of all {{ game }} teams",
+
+    "homePage__rlDescription": "It's like football, but with cars and boost. And it's even more fun.",
+    "homePage__csDescription": "It's like war, but with nail guns and C4 bombs.",
+    "homePage__lolDescription": "When you lose a League of Legends match, it's always your jungler's fault.",
+
+    "playerPage__title": "List of all players",
+
+    "teamPage__title": "{{ team }} {{ videogame }} team"
+}
