@@ -1,4 +1,4 @@
-const BASE_URL = "https://api.pandascore.co";
+const BASE_URL = "/api/pandascore-proxy";
 const AUTH_HEADER = {
     accept: 'application/json',
     authorization: `Bearer UPvzAF-JHJCJj4ME_DMf7gW2fJ5CEuEa2hKE-LS5dn-kNbTTepU`
