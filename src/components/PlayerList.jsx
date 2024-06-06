@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 function PlayerList({ teamData, matchStats }) {
     const { t } = useTranslation();
+    // console.log(teamData);
 
     return (
         <>

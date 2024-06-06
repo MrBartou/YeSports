@@ -23,21 +23,38 @@ async function fetchFromApiWithPagination(endpoint, queryParams = {}) {
         perPage: response.headers.get('X-Per-Page'),
     };
 
+    console.log(data);
+
     return { data, pagination };
 }
 
+// export const fetchAllPlayers = async (filters = {}) => {
+//     const queryParams = {};
+
+//     if (filters.nationality) queryParams['filter[nationality]'] = filters.nationality;
+//     if (filters.role) queryParams['filter[role]'] = filters.role;
+//     if (filters.videogame_id) queryParams['filter[videogame_id]'] = filters.videogame_id;
+//     if (filters.search) queryParams['search[name]'] = filters.search;
+//     if (filters.per_page) queryParams['page[size]'] = filters.per_page;
+//     if (filters.page) queryParams['page'] = filters.page;
+
+//     return fetchFromApi('players', queryParams);
+// };
+
 export const fetchAllPlayers = async (filters = {}) => {
-    const queryParams = {};
+    const queryParams = { 'page[number]': 1, 'page[size]': 30 };
 
     if (filters.nationality) queryParams['filter[nationality]'] = filters.nationality;
     if (filters.role) queryParams['filter[role]'] = filters.role;
     if (filters.videogame_id) queryParams['filter[videogame_id]'] = filters.videogame_id;
     if (filters.search) queryParams['search[name]'] = filters.search;
-    if (filters.per_page) queryParams['page[size]'] = filters.per_page;
-    if (filters.page) queryParams['page'] = filters.page;
 
-    return fetchFromApi('players', queryParams);
+    if (filters.per_page) queryParams['page[size]'] = filters.per_page;
+    if (filters.page) queryParams['page[number]'] = filters.page;
+
+    return fetchFromApiWithPagination('players', queryParams);
 };
+
 
 export const fetchTeamData = teamSlug => fetchFromApi(`teams/${teamSlug}`);
 export const fetchPlayerMatches = playerId => fetchFromApi(`players/${playerId}/matches`);

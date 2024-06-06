@@ -10,6 +10,7 @@ export default async (req, res) => {
       Authorization: 'Bearer UPvzAF-JHJCJj4ME_DMf7gW2fJ5CEuEa2hKE-LS5dn-kNbTTepU'
     }
   });
+
   if (!apiRes.ok) {
     return res.status(apiRes.status).json({ message: 'Erreur lors de la connexion à l\'API PandaScore' });
   }
