@@ -1,7 +1,6 @@
 const BASE_URL = "/apî";
 const AUTH_HEADER = {
     accept: 'application/json',
-    authorization: `Bearer UPvzAF-JHJCJj4ME_DMf7gW2fJ5CEuEa2hKE-LS5dn-kNbTTepU`
 };
 async function fetchFromApi(endpoint, queryParams = {}) {
     const url = new URL(`${BASE_URL}/${endpoint}`)
