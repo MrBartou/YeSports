@@ -1,19 +1,24 @@
+const BASE_URL = "/apî";
+const AUTH_HEADER = {
+    accept: 'application/json',
+    authorization: `Bearer UPvzAF-JHJCJj4ME_DMf7gW2fJ5CEuEa2hKE-LS5dn-kNbTTepU`
+};
 async function fetchFromApi(endpoint, queryParams = {}) {
-    const url = new URL(`/api/pandascore-proxy?endpoint=${endpoint}`, window.location.origin);
+    const url = new URL(`${BASE_URL}/${endpoint}`)
     Object.entries(queryParams).forEach(([key, value]) => {
         if (value) url.searchParams.append(key, value);
     });
 
-    const response = await fetch(url.toString());
+    const response = await fetch(url, { headers: AUTH_HEADER });
     if (!response.ok) throw new Error(`Failed to fetch data from ${endpoint}: ${response.statusText}`);
     return response.json();
 }
 
 async function fetchFromApiWithPagination(endpoint, queryParams = {}) {
-    const url = new URL(`/api/pandascore-proxy?endpoint=${endpoint}`, window.location.origin);
+    const url = new URL(`${BASE_URL}/${endpoint}`)
     Object.entries(queryParams).forEach(([key, value]) => url.searchParams.append(key, value));
 
-    const response = await fetch(url.toString());
+    const response = await fetch(url, { headers: AUTH_HEADER });
     if (!response.ok) throw new Error(`Failed to fetch data from ${endpoint}: ${response.statusText}`);
 
     const data = await response.json();
